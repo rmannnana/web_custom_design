@@ -1,0 +1,370 @@
+﻿/* ======================================
+   FICHIER CSS DE BASE - DESIGN SYSTEM
+   Projet type : Dashboard / WebApp
+   ====================================== */
+
+/* ---------- VARIABLES ---------- */
+:root {
+    /* Couleurs principales */
+    --color-primary: #0057A0; /* Bleu profond */
+    --color-secondary: #00A896; /* Vert eau */
+    --color-accent: #F4A261; /* Orange doux */
+    /* Couleurs neutres */
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+    --color-light: #F8F9FA;
+    --color-dark: #212529;
+    /* États */
+    --color-danger: #E63946;
+    --color-success: #2A9D8F;
+    --color-warning: #E9C46A;
+    /* Typographie */
+    --font-family-base: 'Inter', sans-serif;
+    --font-size-base: 16px;
+    --font-size-sm: 14px;
+    --font-size-lg: 20px;
+    /* Autres */
+    --border-radius: 8px;
+    --transition-base: 0.3s ease;
+}
+
+/* ---------- RESETS DE BASE ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    color: var(--color-dark);
+    background-color: var(--color-white);
+    line-height: 1.6;
+}
+
+/* ---------- UTILITAIRES TYPOGRAPHIE ---------- */
+.text-primary {
+    color: var(--color-primary);
+}
+
+.text-secondary {
+    color: var(--color-secondary);
+}
+
+.text-accent {
+    color: var(--color-accent);
+}
+
+.text-danger {
+    color: var(--color-danger);
+}
+
+.text-success {
+    color: var(--color-success);
+}
+
+.text-warning {
+    color: var(--color-warning);
+}
+
+.text-white {
+    color: var(--color-white);
+}
+
+.text-black {
+    color: var(--color-black);
+}
+
+/* ---------- UTILITAIRES BACKGROUND ---------- */
+.bg-primary {
+    background-color: var(--color-primary);
+}
+
+.bg-secondary {
+    background-color: var(--color-secondary);
+}
+
+.bg-accent {
+    background-color: var(--color-accent);
+}
+
+.bg-danger {
+    background-color: var(--color-danger);
+}
+
+.bg-light {
+    background-color: var(--color-light);
+}
+
+.bg-dark {
+    background-color: var(--color-dark);
+}
+
+.bg-white {
+    background-color: var(--color-white);
+}
+
+/* ---------- UTILITAIRES BOUTONS ---------- */
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    border: none;
+    cursor: pointer;
+    transition: background-color var(--transition-base);
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+    .btn-primary:hover {
+        background-color: #004080;
+    }
+
+.btn-secondary {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+}
+
+.btn-accent {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+}
+
+.btn-danger {
+    background-color: var(--color-danger);
+    color: var(--color-white);
+}
+
+/* ---------- UTILITAIRES GÉNÉRAUX ---------- */
+.rounded {
+    border-radius: var(--border-radius);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+}
+
+/* ======================================
+   EXTENSION UTILITAIRES CSS GÉNÉRIQUES
+   ====================================== */
+
+/* ---------- FLEXBOX ---------- */
+.flex {
+    display: flex;
+}
+
+.inline-flex {
+    display: inline-flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.items-start {
+    align-items: flex-start;
+}
+
+.items-end {
+    align-items: flex-end;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+/* ---------- GRID ---------- */
+.grid {
+    display: grid;
+}
+
+.grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-gap {
+    gap: 1rem;
+}
+
+/* ---------- MARGES & PADDINGS ---------- */
+.m-0 {
+    margin: 0;
+}
+
+.mt-1 {
+    margin-top: 0.5rem;
+}
+
+.mb-1 {
+    margin-bottom: 0.5rem;
+}
+
+.ml-1 {
+    margin-left: 0.5rem;
+}
+
+.mr-1 {
+    margin-right: 0.5rem;
+}
+
+.p-0 {
+    padding: 0;
+}
+
+.pt-1 {
+    padding-top: 0.5rem;
+}
+
+.pb-1 {
+    padding-bottom: 0.5rem;
+}
+
+.pl-1 {
+    padding-left: 0.5rem;
+}
+
+.pr-1 {
+    padding-right: 0.5rem;
+}
+
+.px-1 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.py-1 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.p-2 {
+    padding: 1rem;
+}
+
+.m-2 {
+    margin: 1rem;
+}
+
+/* ---------- RESPONSIVE BREAKPOINTS ---------- */
+/* Mobile-first: on applique de base, puis on étend selon les écrans */
+
+@media (min-width: 640px) {
+    .sm\:flex {
+        display: flex;
+    }
+
+    .sm\:grid-cols-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sm\:text-left {
+        text-align: left;
+    }
+}
+
+@media (min-width: 768px) {
+    .md\:flex {
+        display: flex;
+    }
+
+    .md\:grid-cols-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .md\:text-center {
+        text-align: center;
+    }
+}
+
+@media (min-width: 1024px) {
+    .lg\:grid-cols-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .lg\:text-right {
+        text-align: right;
+    }
+}
+
+/* ---------- FORMULAIRES ---------- */
+input,
+textarea,
+select {
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+        outline: none;
+        border-color: var(--color-primary);
+        box-shadow: 0 0 0 2px rgba(0, 87, 160, 0.2);
+    }
+
+label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: 500;
+    color: var(--color-dark);
+}
+
+/* ---------- TRANSITIONS ---------- */
+.transition {
+    transition: all var(--transition-base);
+}
+
+.hover\:opacity-80:hover {
+    opacity: 0.8;
+}
+
+.shadow {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
